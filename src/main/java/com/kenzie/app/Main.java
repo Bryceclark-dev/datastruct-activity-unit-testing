@@ -2,6 +2,7 @@ package com.kenzie.app;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Main {
 
@@ -15,12 +16,13 @@ public class Main {
 
     // create countCharacter(Char c, String str) method
     public static int countCharacter(char c, String str) {
-        char[] ch = str.toCharArray();
+        char[] ch = str.toLowerCase().toCharArray();
+        char lowerCase = Character.toLowerCase(c);
         int totalChars = 0;
         //Loop through array and count character matches
         for (char i : ch) {
             //check for match with input character
-            if (i == c) {
+            if (i == lowerCase) {
                 totalChars++;
             }
         }
